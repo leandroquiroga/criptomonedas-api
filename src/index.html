@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Criptomonedas</title>
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="./assets/svg/bitcoin_currency_finance_calculator_calculate_icon_124683.svg" type="image/x-icon">
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+        <!-- Styles CSS -->
+        <link rel="stylesheet" href="./css/main.css">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    </head>
+    <body class="content">
+        <main class="main container mx-auto p-5 mt-5">
+            <section class=" logo container d-flex justify-content-center mx-auto  w-100">
+                <img src="./assets/img/cryptomonedas.png" alt="crypto" class="img-logo">
+            </section>
+            <section class="formulario container d-flex row justify-content-center mx-auto  w-100 ">
+                <form action="" id="form" class="w-100">
+                    <label for="moneda" class="title-select">Escoja su moneda local:</label>
+                    <select name="moneda" id="moneda" class="form-select my-2">
+                        <option selected class="options" value="">Escoja su moneda local</option>
+                        <option value="USD" class="options">Dolar</option>
+                        <option value="MEX" class="options">Mexico</option>
+                        <option value="ARG" class="options">Peso Argentino</option>
+                        <option value="EUR" class="options">Euro</option>
+                        <option value="GBP" class="options">Libra</option>
+                        <option value="JPY" class="options">Yenes</option>
+                    </select>
+                    <label for="crypto" class="title-select">Escoja el crypto:</label>
+                    <select name="crypto" id="crypto" class="form-select my-2">
+                      <option selected class="options" value="">Escoja la criptomoneda</option>
+                    </select>
+                    <button type="submit" class="p-2 w-100 rounded-3 my-2 button border-0 shadow-none" data-bs-toggle="modal" data-bs-target="#modalResult">Cotizar</button>
+                </form>
+                <small class="text-danger text-center err" id="form-invalid"></small>
+            </section>
+        </main>
+          <!-- Modal -->
+        <div class="modal fade" id="modalResult" tabindex="-1" aria-labelledby="content-modal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content visually-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="content-modal"></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p class="text-modal text-center" id="price"></p>
+                  <p class="text-modal text-center" id="higth-day"></p>
+                  <p class="text-modal text-center" id="higth-hours"></p>
+                  <p class="text-modal text-center" id="low-day"></p>
+                  <p class="text-modal text-center" id="last-update"></p>
+                  <p class="text-modal text-center" id="variant"></p>
+                </div>
+              </div>
+              <div class="modal-spinner d-flex justify-content-center align-content-center w-100 visually-hidden">
+                <img src="./assets/svg/spinning-circles.svg" alt="spinner">
+              </div>
+            </div>
+        </div>
+        <!-- Scripts -->
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+        <script src="./js/index.js"></script>
+    </body>
+</html>
