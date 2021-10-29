@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --dark: #202020;
+    --white: #fefefe;
+    --blue: #141331;
+    --orange: #ce881f;
+    --font: 'Nunito', sans-serif;
+    --ligh-blue: #2444aa;
+}
+.content{
+    background-color: var(--blue);
+}
+.content .main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, auto));
+    place-content: center;
+    place-items: center;
+}
+.content .main .logo .img-logo{
+    width: 320px;
+}
+
+.content .main .formulario .title-select{
+    font: 400 1.2rem var(--font);
+    color: var(--white);
+}
+
+.content .main .formulario .options{
+    font: 400 .9rem var(--font);
+    color: var(--dark);
+    cursor: pointer;
+}
+.content .main .formulario .button{
+    background-color: var(--ligh-blue);
+    color: var(--white);
+    font: 600 1rem var(--font);
+    outline: none;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.content .main .formulario .button:hover{
+    background-color: var(--orange);
+    transition: all .5s ease-in-out;
+}
+.content .main .formulario .button:disabled{
+    background-color: var(--dark);
+    cursor:no-drop
+}
+.content .main .formulario .err{
+    font: 800 .9rem var(--font)
+}
+
+.content .modal .modal-body .text-modal{
+    font: 800 1.2rem var(--font);
+    color: var(--blue);
+}
